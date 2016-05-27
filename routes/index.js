@@ -14,6 +14,11 @@ router.get('/', function(req, res, next) {
   res.render('home');
 });
 
+// get test page
+router.get('/test', function(req, res, next) {
+	res.render('index', {title: 'HELLO WORLD!'});
+});
+
 router.get('/memories', function(req, res, next) {	
 	// connect a client	
 	var client = new pg.Client(connectionString);
