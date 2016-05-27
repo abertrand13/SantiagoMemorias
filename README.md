@@ -1,4 +1,4 @@
-# A Proposal to Understand Chile's Memory
+# Open Notebook: A Proposal to Understand Chile's Memory
 [that's a working title]
 
 *Alex Bertrand*
@@ -78,3 +78,10 @@ Another thing that's special about Chile is it's interesting combination of stab
 
 #### What do our readings have to do with all of this?
 Don't really know.  Gonna table it for now.
+
+## Code Shenanigans
+
+#### Things to Do Still
+- bulletproofing
+- autofill location
+- location control?
