@@ -7,7 +7,7 @@ var env = require('node-env-file');
 // load env files
 env(__dirname + '/.env');
 
-var connectionString = process.env.dburl;
+var connectionString = process.env.DATABASE_URL;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
