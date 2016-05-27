@@ -1,0 +1,53 @@
+html {
+	background-color: rgba(231, 76, 60, .37);
+	text-align: center;
+}
+
+body {
+	font-family: Trebuchet MS;
+}
+
+input, textarea {
+	font-family: inherit;
+}
+
+
+input[type=text] {
+	border-radius: 3px;
+	border: 2px solid;
+	border-color: rgb(231, 76, 60);
+	margin-bottom: 10px;
+	width: 90%;
+	box-shadow: none;
+	font-size: 2em;
+}
+
+textarea {
+	text-align: left;
+	vertical-align: top;
+	border-radius: 3px;
+	border: 2px solid;
+	border-color: rgb(231, 76, 60);
+	margin-bottom: 5px;
+	width: 90%;
+	/*height: auto;
+	max-height: 70%; */
+	height: 70%;
+	resize: none;
+	font-size: 2em;
+	margin-bottom: 10px;
+}
+
+input:focus {
+	outline: solid rgb(74, 144, 226);
+}
+
+input[type=submit] {
+	background-color: rgb(74, 144, 226);
+	color: white;
+	border-width: 2px;
+	border-radius: 8px;
+	border: none;
+	width: 40%;
+	font-size: 2em;
+}

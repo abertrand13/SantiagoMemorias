@@ -1,7 +1,17 @@
+# node modules
 node_modules/
 
+# my design work
 design.sketch
 
+# I have PDFz here?
 *.pdf
 
+# dammit vim
 *.swp
+
+# yup, no one needs to see my stupidity
+npm-debug.log
+
+# well der.
+**/.env
