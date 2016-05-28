@@ -2,8 +2,20 @@ body {
 	text-align: center;
 	font-family: 'Trebuchet MS';
 	background-repeat: no-repeat;
-	background-size: auto 100%;
 	background-position: center;
+	background-attachment: fixed;
+}
+
+@media (orientation: portrait) {
+	body {
+		background-size: auto 100%;
+	}
+}
+
+@media (orientation: landscape) {
+	body {
+		background-size: 100%;
+	}
 }
 
 .memory {
@@ -12,7 +24,7 @@ body {
 	padding-top: 10px;
 	padding-bottom: 10px;
 	padding-right: 10px;
-	background-color: rgba(255, 0, 0, .3);
+	background-color: rgba(255, 0, 0, .4);
 	margin-bottom: 10px;
 	width: 90%;
 	margin-left: auto;
