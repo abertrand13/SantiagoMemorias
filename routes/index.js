@@ -48,6 +48,43 @@ router.get('/memories', function(req, res, next) {
 	});
 });
 
+router.get('/all', function(req, res, next) {
+	res.render('allhome');
+});
+
+router.get('/allmemories', function(req, res, next) {
+	// connect a client	
+	var client = new pg.Client(connectionString);
+	client.connect(function(err) {
+		if(err) {
+			console.log('[alex] error in connecting to database, trying to fetch:' + err);
+
+			// Major bodge here.
+			res.send([
+				{
+					place: 'Lo siento!',
+					memory: 'Hemos encontrado un error :('
+				}
+			]);
+		}
+	});
+
+	
+	// array to hold results	
+	var results = [];
+
+	// connect to db and pull memories
+	var query = client.query("SELECT * FROM memories ORDER BY id DESC"); // dead simple, mate
+	query.on('row', function(data) {
+		results.push(data);	
+	});
+
+	query.on('end', function() {
+		client.end();
+		return res.json(results);
+	});
+});
+
 router.get('/compartir', function(req, res, next) {
 	res.render('submit');
 });
