@@ -48,7 +48,7 @@ router.get('/memories', function(req, res, next) {
 	});
 });
 
-router.get('/baquedano', function(req, res, next) {
+router.get('/compartir', function(req, res, next) {
 	res.render('submit');
 });
 

@@ -2,7 +2,7 @@
 node_modules/
 
 # my design work
-design.sketch
+**.sketch
 
 # I have PDFz here?
 *.pdf
