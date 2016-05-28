@@ -21,16 +21,17 @@ router.get('/memories', function(req, res, next) {
 	// connect a client	
 	var client = new pg.Client(connectionString);
 	client.connect(function(err) {
-		// this callback gets called when there's an error
-		console.log('[alex] error in connecting to database:' + err);
+		if(err) {
+			console.log('[alex] error in connecting to database:' + err);
 
-		// Major bodge here.
-		res.send([
-			{
-				place: 'Lo siento!',
-				memory: 'Hemos encontrado un error :('
-			}
-		]);
+			// Major bodge here.
+			res.send([
+				{
+					place: 'Lo siento!',
+					memory: 'Hemos encontrado un error :('
+				}
+			]);
+		}
 	});
 
 	
