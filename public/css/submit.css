@@ -48,6 +48,6 @@ input[type=submit] {
 	border-width: 2px;
 	border-radius: 8px;
 	border: none;
-	width: 40%;
+	max-width: 70%;
 	font-size: 2em;
 }
