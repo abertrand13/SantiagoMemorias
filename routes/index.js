@@ -16,13 +16,13 @@ router.get('/test', function(req, res, next) {
 });
 
 router.get('/memories', function(req, res, next) {	
-	console.log(connectionString);	
+	console.log('[alex] database connection string:' + connectionString);	
 	
 	// connect a client	
 	var client = new pg.Client(connectionString);
 	client.connect(function(err) {
 		// this callback gets called when there's an error
-		console.log(err);
+		console.log('[alex] error in connecting to database:' + err);
 
 		// Major bodge here.
 		res.send([
