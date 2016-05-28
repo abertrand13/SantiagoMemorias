@@ -2,10 +2,6 @@ var express = require('express');
 var router = express.Router();
 
 var pg = require('pg'); // postgres
-var env = require('node-env-file');
-
-// load env files
-env(__dirname + '/.env');
 
 var connectionString = process.env.DATABASE_URL;
 
@@ -20,9 +16,23 @@ router.get('/test', function(req, res, next) {
 });
 
 router.get('/memories', function(req, res, next) {	
+	console.log(connectionString);	
+	
 	// connect a client	
 	var client = new pg.Client(connectionString);
-	client.connect();
+	client.connect(function(err) {
+		// this callback gets called when there's an error
+		console.log(err);
+
+		// Major bodge here.
+		res.send([
+			{
+				place: 'Lo siento!',
+				memory: 'Hemos encontrado un error :('
+			}
+		]);
+	});
+
 	
 	// array to hold results	
 	var results = [];
