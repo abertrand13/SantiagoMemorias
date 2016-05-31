@@ -17,4 +17,6 @@ npm-debug.log
 **/.env
 
 # notes
-notes
+**/notes
+**/notes.notes
+**/draft.*
